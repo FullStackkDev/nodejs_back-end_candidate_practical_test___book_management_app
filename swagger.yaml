@@ -1,0 +1,213 @@
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+
+tags:
+  - name: authors
+    description: Auth API
+  - name: books
+    description: Books API
+
+paths:
+  # [POST] signup
+  /signup:
+    post:
+      tags:
+        - authors
+      summary: Add Author
+      parameters:
+        - name: body
+          in: body
+          description: Author Data
+          required: true
+          schema:
+            $ref: "#/definitions/authors"
+      responses:
+        201:
+          description: "Created"
+        400:
+          description: "Bad Request"
+        409:
+          description: "Conflict"
+        500:
+          description: "Server Error"
+
+  # [POST] login
+  /login:
+    post:
+      tags:
+        - authors
+      summary: Login Author
+      parameters:
+        - name: body
+          in: body
+          description: Author Login Data
+          required: true
+          schema:
+            $ref: "#/definitions/loginAuthor"
+      responses:
+        201:
+          description: "Created"
+        400:
+          description: "Bad Request"
+        409:
+          description: "Conflict"
+        500:
+          description: "Server Error"
+
+  # [GET] books
+  /books:
+    get:
+      security:
+        - Bearer: []
+      tags:
+        - books
+      summary: Find All Books
+      responses:
+        200:
+          description: "OK"
+        500:
+          description: "Server Error"
+
+    # [POST] books
+    post:
+      security:
+        - Bearer: []
+      tags:
+        - books
+      summary: Add Book
+      parameters:
+        - name: body
+          in: body
+          description: Book Data
+          required: true
+          schema:
+            $ref: "#/definitions/books"
+      responses:
+        201:
+          description: "Created"
+        400:
+          description: "Bad Request"
+        409:
+          description: "Conflict"
+        500:
+          description: "Server Error"
+
+  # [GET] books/id
+  /books/{id}:
+    get:
+      security:
+        - Bearer: []
+      tags:
+        - books
+      summary: Find Book By Id
+      parameters:
+        - name: id
+          in: path
+          description: Book Id
+          required: true
+      responses:
+        200:
+          description: "OK"
+        409:
+          description: "Conflict"
+        500:
+          description: "Server Error"
+
+    # [PUT] books/id
+    put:
+      security:
+        - Bearer: []
+      tags:
+        - books
+      summary: Update Book By Id
+      parameters:
+        - name: id
+          in: path
+          description: book Id
+          required: true
+        - name: body
+          in: body
+          description: book Data
+          required: true
+          schema:
+            $ref: "#/definitions/books"
+      responses:
+        200:
+          description: "OK"
+        400:
+          description: "Bad Request"
+        409:
+          description: "Conflict"
+        500:
+          description: "Server Error"
+
+    # [DELETE] books/id
+    delete:
+      security:
+        - Bearer: []
+      tags:
+        - books
+      summary: Delete Book By Id
+      parameters:
+        - name: id
+          in: path
+          description: book Id
+          required: true
+      responses:
+        200:
+          description: "OK"
+        409:
+          description: "Conflict"
+        500:
+          description: "Server Error"
+
+# definitions
+definitions:
+  authors:
+    type: object
+    required:
+      - email
+      - password
+      - authorName
+    properties:
+      email:
+        type: string
+        description: author Email
+      password:
+        type: string
+        description: author Password
+      authorName:
+        type: string
+        description: author name
+  loginAuthor:
+    type: object
+    required:
+      - email
+      - password
+    properties:
+      email:
+        type: string
+        description: author Email
+      password:
+        type: string
+        description: author Password
+
+  books:
+    type: object
+    required:
+      - bookName
+      - bookDesc
+    properties:
+      bookName:
+        type: string
+        description: book name
+      bookDesc:
+        type: string
+        description: book description
+
+schemes:
+  - https
+  - http

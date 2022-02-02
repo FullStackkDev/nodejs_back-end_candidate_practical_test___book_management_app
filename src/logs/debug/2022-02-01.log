@@ -1,0 +1,40 @@
+2022-02-01 14:02:49 info: =================================
+2022-02-01 14:02:49 info: ======= ENV: development =======
+2022-02-01 14:02:49 info: 🚀 App listening on the port 3000
+2022-02-01 14:02:49 info: =================================
+2022-02-01 14:03:30 info: [0mGET / [32m200[0m 7.419 ms - 2[0m
+2022-02-01 14:03:30 info: [0mGET /favicon.ico [33m404[0m 3.351 ms - 150[0m
+2022-02-01 14:03:37 info: [0mGET /api-doc [33m404[0m 1.009 ms - 146[0m
+2022-02-01 14:03:44 info: [0mGET /api-docs [36m301[0m 1.961 ms - 183[0m
+2022-02-01 14:03:44 info: [0mGET /api-docs/ [32m200[0m 5.666 ms - -[0m
+2022-02-01 14:03:44 info: [0mGET /api-docs/swagger-ui-init.js [32m200[0m 0.726 ms - -[0m
+2022-02-01 14:03:44 info: [0mGET /api-docs/swagger-ui.css [32m200[0m 12.594 ms - -[0m
+2022-02-01 14:03:44 info: [0mGET /api-docs/swagger-ui-standalone-preset.js [32m200[0m 15.238 ms - -[0m
+2022-02-01 14:03:44 info: [0mGET /api-docs/swagger-ui-bundle.js [32m200[0m 10.822 ms - -[0m
+2022-02-01 14:03:44 info: [0mGET /api-docs/favicon-32x32.png [32m200[0m 2.041 ms - 628[0m
+2022-02-01 14:03:53 info: [0mGET /login [33m404[0m 3.888 ms - 144[0m
+2022-02-01 14:04:00 info: [0mGET /api-docs/ [36m304[0m 1.926 ms - -[0m
+2022-02-01 14:04:00 info: [0mGET /api-docs/swagger-ui.css [36m304[0m 4.114 ms - -[0m
+2022-02-01 14:04:00 info: [0mGET /api-docs/swagger-ui-bundle.js [36m304[0m 6.808 ms - -[0m
+2022-02-01 14:04:00 info: [0mGET /api-docs/swagger-ui-init.js [36m304[0m 1.662 ms - -[0m
+2022-02-01 14:04:00 info: [0mGET /api-docs/swagger-ui-standalone-preset.js [36m304[0m 3.259 ms - -[0m
+2022-02-01 14:04:24 info: [0mGET /api-docs/swagger-ui.css [36m304[0m 3.687 ms - -[0m
+2022-02-01 14:04:24 info: [0mGET /api-docs/swagger-ui-init.js [36m304[0m 1.686 ms - -[0m
+2022-02-01 14:04:24 info: [0mGET /api-docs/swagger-ui-bundle.js [36m304[0m 14.793 ms - -[0m
+2022-02-01 14:04:24 info: [0mGET /api-docs/swagger-ui-standalone-preset.js [36m304[0m 7.479 ms - -[0m
+2022-02-01 14:04:29 info: [0mGET /ignup [33m404[0m 0.845 ms - 144[0m
+2022-02-01 14:04:33 info: [0mGET /signup [33m404[0m 0.604 ms - 145[0m
+2022-02-01 14:05:28 info: [0mPOST /signup [32m201[0m 200.946 ms - 106[0m
+2022-02-01 14:06:04 info: [0mPOST /login [32m200[0m 104.229 ms - 288[0m
+2022-02-01 14:55:15 info: [0mPOST /books [32m201[0m 34.077 ms - 163[0m
+2022-02-01 14:55:17 error: [POST] /books >> StatusCode:: 409, Message:: Book Name Test Book already exists
+2022-02-01 14:55:17 info: [0mPOST /books [33m409[0m 21.357 ms - 48[0m
+2022-02-01 14:55:30 info: [0mPOST /books [32m201[0m 14.263 ms - 169[0m
+2022-02-01 14:55:32 error: [POST] /books >> StatusCode:: 409, Message:: Book Name Test Book Today already exists
+2022-02-01 14:55:32 info: [0mPOST /books [33m409[0m 16.457 ms - 54[0m
+2022-02-01 14:55:47 error: [GET] /books/1 >> StatusCode:: 500, Message:: Invalid bookId
+2022-02-01 14:55:47 info: [0mGET /books/1 [31m500[0m 8.212 ms - 28[0m
+2022-02-01 14:55:50 error: [GET] /books/1 >> StatusCode:: 500, Message:: Invalid bookId
+2022-02-01 14:55:50 info: [0mGET /books/1 [31m500[0m 6.558 ms - 28[0m
+2022-02-01 14:56:42 info: [0mGET /books [32m200[0m 20.021 ms - 306[0m
+2022-02-01 14:56:55 info: [0mGET /books/61f949d30003af002737c8d0 [32m200[0m 9.839 ms - 163[0m

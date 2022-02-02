@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/home/ntpl-295/test/nodeJSTestArslan/book-management-app/src/logs/error/.344519d76605d5585edd948568a882eb1528893d-audit.json",
+    "files": [
+        {
+            "date": 1643636155441,
+            "name": "/home/ntpl-295/test/nodeJSTestArslan/book-management-app/src/logs/error/2022-01-31.log",
+            "hash": "9612bb6a82f7ad063a5b6c92e0edfc7a"
+        }
+    ],
+    "hashType": "md5"
+}

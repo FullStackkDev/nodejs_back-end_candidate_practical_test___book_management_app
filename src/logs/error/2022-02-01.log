@@ -1,0 +1,4 @@
+2022-02-01 14:55:17 error: [POST] /books >> StatusCode:: 409, Message:: Book Name Test Book already exists
+2022-02-01 14:55:32 error: [POST] /books >> StatusCode:: 409, Message:: Book Name Test Book Today already exists
+2022-02-01 14:55:47 error: [GET] /books/1 >> StatusCode:: 500, Message:: Invalid bookId
+2022-02-01 14:55:50 error: [GET] /books/1 >> StatusCode:: 500, Message:: Invalid bookId
